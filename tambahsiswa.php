@@ -10,6 +10,6 @@ if (isset($_POST['simpan'])) {
         VALUES ('$nama_siswa', '$jurusan', '$kelas')";
             mysqli_query($conn, $query);
 
-    header("Location: index.php");
+    header("Location: tampilsiswa.php");
 }
 ?>
