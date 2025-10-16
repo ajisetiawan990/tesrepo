@@ -6,7 +6,7 @@
     <title>Data CRUD</title>
 </head>
 <body>
-    <a href="">Data Siswa</a>
+    <a href="tampilsiswa.php">Data Siswa</a>
     <a href="">Data Guru</a>
 </body>
 </html>
