@@ -25,13 +25,18 @@ $result = mysqli_query($conn, "
             <th>Nama</th>
             <th>Jurusan</th>
             <th>Kelas</th>
+            <th>Aksi</th>
         </tr>
-        <?php while ($row = mysqli_fetch_assoc($result)): ?>
+        <?php $no = 1; while ($row = mysqli_fetch_assoc($result)): ?>
         <tr>
-            <td><?= $row['id'] ?></td>
+            <td><?= $no++ ?></td>
             <td><?= $row['nama_siswa'] ?></td>
             <td><?= $row['jurusan'] ?></td>
             <td><?= $row['kelas'] ?: '-' ?></td>
+            <td>
+                <a href="formubahsiswa.php?id=<?= $row['id'] ?>">Ubah</a> |
+                <a href="hapussiswa.php?id=<?= $row['id'] ?>" onclick="return confirm('Anis mau hapus ya?')">Hapus</a>
+            </td>
         </tr>
         <?php endwhile; ?>
     </table>
